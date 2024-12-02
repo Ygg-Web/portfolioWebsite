@@ -16,7 +16,7 @@
     </section>
     <section>
       <div class="px-6 py-12 sm:px-12 lg:px-16 h-[100vh] overflow-hidden">
-        <div class="grid lg:grid-flow-col gap-10">
+        <div class="grid lg:grid-flow-col gap-10 mx-auto">
           <div class="lg:w-[400px] lg:h-[800px] bg-slate-600">
             Изображение
           </div>
@@ -29,7 +29,8 @@
                 На сайте разместил информацию о себе и своих работах. Цель - показать портфолио веб-разработчика.
                 В прошлом инженер в области информационно-аналитических систем, который нашел свое предназначение в мире
                 IT.
-                Получаю огромное удовольствие от своей работы. <NuxtLink to="/about" class="text-[#B8B799]">Узнать больше</NuxtLink>
+                Получаю огромное удовольствие от своей работы. <NuxtLink to="/about" class="text-[#B8B799]">Узнать
+                  больше</NuxtLink>
               </p>
             </div>
           </div>
@@ -38,7 +39,7 @@
     </section>
     <section>
       <div class="px-6 py-12 sm:px-12 lg:px-16 h-[100vh] overflow-hidden">
-        <div class="grid lg:grid-flow-col lg:gap-10">
+        <div class="grid lg:grid-flow-col lg:gap-10 mx-auto">
           <div class="lg:w-[400px] lg:h-[800px] bg-slate-600 lg:order-last">
             Изображение
           </div>
@@ -48,7 +49,8 @@
             </div>
             <div class="text-base sm:text-lg lg:text-xl">
               <p>
-                Уже более 5 лет занимаюсь созданием приложений для МО. (Расписать больше) <NuxtLink to="/about" class="text-[#B8B799]">Узнать больше</NuxtLink>
+                Уже более 5 лет занимаюсь созданием приложений для МО. (Расписать больше) <NuxtLink to="/about"
+                  class="text-[#B8B799]">Узнать больше</NuxtLink>
               </p>
             </div>
           </div>
@@ -56,12 +58,13 @@
       </div>
     </section>
     <section>
-      <div class="px-6 py-12 sm:px-12 lg:px-16 ">
+      <div class="px-6 py-12 sm:px-12 lg:px-16 mx-auto">
         <div>
           <div class="text-center py-2 text-xl sm:text-2xl lg:text-3xl">Проекты</div>
           <div class="text-base sm:text-lg lg:text-xl">
             <p>
-              Представляю вам несколько последних проектов, над которыми я работал <NuxtLink to="/projects" class="text-[#B8B799]">Узнать больше</NuxtLink>
+              Представляю вам несколько последних проектов, над которыми я работал <NuxtLink to="/projects"
+                class="text-[#B8B799]">Узнать больше</NuxtLink>
             </p>
           </div>
         </div>
