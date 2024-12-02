@@ -3,7 +3,19 @@
 @tailwind utilities;
 
 body {
-    background-color: black;
-    color: #fff;
-    @apply font-custom;
+  background-color: black;
+  color: #fff;
+  @apply font-custom;
+}
+
+the-title-main {
+  @apply text-xl sm:text-2xl lg:text-3xl;
+}
+
+the-title-secondary {
+  @apply text-lg sm:text-xl lg:text-2xl;
+}
+
+the-text-main {
+  @apply text-base sm:text-lg lg:text-xl;
 }
