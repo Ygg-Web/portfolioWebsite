@@ -1,14 +1,9 @@
 <template>
   <article>
     <section>
-      <div class="h-[100vh] overflow-hidden py-24 sm:py-32 flex items-center">
-        <div class="mx-auto px-6 lg:px-8">
-          <div class="mx-auto lg:mx-0">
-            <p class="text-5xl text-center font-semibold text-white sm:text-7xl lg:text-8xl">Мои работы</p>
-            <p class="text-2xl text-center sm:text-4xl lg:text-5xl">Ниже вы найдете подборку моих проектов.</p>
-          </div>
-        </div>
-      </div>
+      <PagePreview
+        :value="{ title: 'Мои работы', description: 'Ниже вы найдете подборку моих проектов'}"
+      />
     </section>
     <section>
       <div class="py-2">
