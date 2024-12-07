@@ -1,7 +1,7 @@
 <template>
   <div class="mx-auto py-4 px-2">
-    <div class="text-center py-2 text-xl sm:text-2xl lg:text-3xl">{{ title }}</div>
-    <div class="px-4 sm:px-10 lg:px-14 text-base sm:text-lg lg:text-xl grid gap-2">
+    <div class="the-title-main text-center py-2">{{ title }}</div>
+    <div class="the-text-main px-4 sm:px-10 lg:px-14 grid gap-2">
       <p v-for="(item, index) in text" :key="index">
         {{ item }}
       </p>
@@ -10,7 +10,12 @@
 </template>
 
 <script setup lang="ts">
-defineProps(['title', 'text']);
+import { defineProps } from 'vue';
+
+defineProps<{
+  title: string;
+  text: string[];
+}>();
 </script>
 
 <style scoped></style>
