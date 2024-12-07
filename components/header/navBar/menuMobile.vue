@@ -1,25 +1,46 @@
 <template>
-  <!-- Mobile menu, show/hide based on menu state. -->
-  <div class="sm:hidden" id="mobile-menu">
+  <div
+    class="sm:hidden bg-black"
+    :class="{'hidden' : !isOpenMenu}"
+  >
     <div class="space-y-1 px-2 pb-3 pt-2">
-      <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-      <NuxtLink to="/" class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white"
-        aria-current="page">Главная</NuxtLink>
-      <NuxtLink to="/about"
-        class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">
-        Резюме</NuxtLink>
-      <NuxtLink to="/projects"
-        class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">
-        Проекты</NuxtLink>
-      <NuxtLink to="/contacts"
-        class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">
-        Контакты</NuxtLink>
+      <NuxtLink
+        v-for="(item, ind) in items"
+        :key="ind"
+        :class="[item.key === $route.name ? 'nav-link-active' : 'nav-link']"
+        :to="item.path"
+      >
+        {{ item.name }}
+      </NuxtLink>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
+import { defineProps } from 'vue';
 
+defineProps<{
+  isOpenMenu: boolean;
+  items: { name: string, path: string, key: string }[];
+}>();
 </script>
 
-<style scoped></style>
+<style scoped lang="postcss">
+.nav-link-active,
+.nav-link {
+  @apply block rounded-md px-3 py-2 text-base font-medium;
+}
+
+.nav-link-active {
+  @apply bg-gray-900 text-white;
+}
+
+.nav-link {
+  @apply text-gray-400;
+}
+
+.nav-link:hover:not(.nav-link-active) {
+  @apply hover:bg-gray-700 hover:text-white;
+}
+
+</style>
