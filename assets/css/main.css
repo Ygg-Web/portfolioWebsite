@@ -8,14 +8,21 @@ body {
   @apply font-custom;
 }
 
-the-title-main {
+.the-title-preview {
+  @apply text-5xl font-semibold text-white sm:text-7xl lg:text-8xl
+}
+
+.the-text-preview {
+  @apply text-2xl sm:text-4xl lg:text-5xl
+}
+.the-title-main {
   @apply text-xl sm:text-2xl lg:text-3xl;
 }
 
-the-title-secondary {
+.the-title-secondary {
   @apply text-lg sm:text-xl lg:text-2xl;
 }
 
-the-text-main {
+.the-text-main {
   @apply text-base sm:text-lg lg:text-xl;
 }

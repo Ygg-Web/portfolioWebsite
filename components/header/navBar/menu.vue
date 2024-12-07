@@ -11,7 +11,6 @@
         <NuxtLink to="/about" class="nav-link">Резюме</NuxtLink>
         <NuxtLink to="/projects" class="nav-link">Проекты</NuxtLink>
         <NuxtLink to="/contacts" class="nav-link">Контакты</NuxtLink>
-        <NuxtLink to="/" class="nav-link">Достижения</NuxtLink>
       </div>
     </div>
   </div>
