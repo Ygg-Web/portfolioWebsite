@@ -8,6 +8,10 @@ body {
   @apply font-custom;
 }
 
+body.hidden-body {
+  overflow: hidden;
+}
+
 .the-title-preview {
   @apply text-5xl font-semibold text-white sm:text-7xl lg:text-8xl
 }

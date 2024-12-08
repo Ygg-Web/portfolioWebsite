@@ -1,9 +1,9 @@
 <template>
   <div
-    class="sm:hidden bg-black"
-    :class="{'hidden' : !isOpenMenu}"
+    class="sm:hidden bg-black fixed h-[100vh] top-[-100px] right-[0px] w-full z-40 duration-300 opacity-0 invisible pt-[70px] overflow-y-auto"
+    :class="{'visible-menu' : isOpenMenu}"
   >
-    <div class="space-y-1 px-2 pb-3 pt-2">
+    <div class="space-y-1 px-2 pb-3 pt-8">
       <NuxtLink
         v-for="(item, ind) in items"
         :key="ind"
@@ -28,7 +28,7 @@ defineProps<{
 <style scoped lang="postcss">
 .nav-link-active,
 .nav-link {
-  @apply block rounded-md px-3 py-2 text-base font-medium;
+  @apply block rounded-md px-3 py-2 text-xl font-medium;
 }
 
 .nav-link-active {
@@ -43,4 +43,7 @@ defineProps<{
   @apply hover:bg-gray-700 hover:text-white;
 }
 
+.visible-menu {
+  @apply visible top-0 opacity-100;
+}
 </style>

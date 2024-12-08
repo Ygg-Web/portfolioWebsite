@@ -16,7 +16,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, watch } from 'vue';
 
 const isOpenMenu = ref<boolean>(false);
 const menuItems = [
@@ -41,6 +41,14 @@ const menuItems = [
     key: 'contacts',
   },
 ]
+
+watch(isOpenMenu, (v) => {
+  if (v) {
+    document.body.classList.add('hidden-body');
+  } else {
+    document.body.classList.remove('hidden-body');
+  }
+});
 </script>
 
 <style scoped></style>
